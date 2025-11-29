@@ -6,7 +6,7 @@ import reactRefresh from "eslint-plugin-react-refresh";
 import { defineConfig, globalIgnores } from "eslint/config";
 
 export default defineConfig([
-	globalIgnores(["**/node_modules", "**/dist", "apps/web/.vite"]),
+	globalIgnores(["**/node_modules", "**/dist", "apps/web/.vite", "apps/server/prisma.config.ts"]),
 
 	{
 		files: ["apps/web/**/*.{ts,tsx}"],
