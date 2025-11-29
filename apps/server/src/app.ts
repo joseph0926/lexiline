@@ -1,11 +1,15 @@
 import Fastify from "fastify";
-import fastifyEnv from "@fastify/env";
-import { envOptions } from "./config";
+import env from "./plugins/env";
+import cors from "./plugins/cors";
+import health from "./routes/health";
 
 export async function buildApp() {
 	const app = Fastify({ logger: true });
 
-	await app.register(fastifyEnv, envOptions);
+	await env(app);
+	await cors(app);
+
+	await health(app);
 
 	return app;
 }
