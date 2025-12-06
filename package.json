@@ -1,7 +1,7 @@
 {
 	"name": "lexiline",
 	"version": "1.0.0",
-	"description": "영단어 & 문장 해석 트레이너",
+	"description": "지금 한 개비 말고, 조금 있다가 한 개비",
 	"main": "index.js",
 	"scripts": {
 		"dev": "turbo dev",
